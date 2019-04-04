@@ -6,7 +6,7 @@
 #
 Name     : deprecated-Jinja2
 Version  : 2.10
-Release  : 57
+Release  : 58
 URL      : http://pypi.debian.net/Jinja2/Jinja2-2.10.tar.gz
 Source0  : http://pypi.debian.net/Jinja2/Jinja2-2.10.tar.gz
 Source99 : http://pypi.debian.net/Jinja2/Jinja2-2.10.tar.gz.asc
@@ -18,9 +18,9 @@ Requires: deprecated-Jinja2-python = %{version}-%{release}
 Requires: Babel
 Requires: MarkupSafe
 BuildRequires : MarkupSafe
-BuildRequires : MarkupSafe-legacypython
 BuildRequires : buildreq-distutils
 BuildRequires : buildreq-distutils3
+BuildRequires : deprecated-MarkupSafe-legacypython
 
 %description
 Flask Sphinx Styles
@@ -63,7 +63,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554321497
+export SOURCE_DATE_EPOCH=1554336625
 export MAKEFLAGS=%{?_smp_mflags}
 python2 setup.py build -b py2
 
